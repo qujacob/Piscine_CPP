@@ -20,6 +20,10 @@ Cat::~Cat(void) {
 
 Cat	&Cat::operator=(Cat &c) {
 	this->_type = c.getType();
+	if (this->_brain)
+		delete this->_brain;
+	this->_brain = new Brain();
+	*this->_brain = *c.getBrain();
 	return (*this);
 }
 

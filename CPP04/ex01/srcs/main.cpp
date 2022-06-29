@@ -21,5 +21,11 @@ int main() {
 		tab[i]->makeSound();
 		delete tab[i];
 	}
+
+	Dog dog;
+	Dog tmp = dog;
+
+	std::cout << dog.getBrain() << std::endl;
+	std::cout << tmp.getBrain() << std::endl;
 	return (0);
 }

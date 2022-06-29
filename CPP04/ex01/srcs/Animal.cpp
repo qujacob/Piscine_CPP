@@ -18,6 +18,10 @@ Animal::~Animal(void) {
 
 Animal	&Animal::operator=(Animal &a) {
 	this->_type = a.getType();
+	if (this->_brain)
+		delete this->_brain;
+	this->_brain = new Brain();
+	*this->_brain = *a.getBrain();
 	return (*this);
 }
 

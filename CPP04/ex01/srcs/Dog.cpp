@@ -20,6 +20,10 @@ Dog::~Dog(void) {
 
 Dog	&Dog::operator=(Dog &d) {
 	this->_type = d.getType();
+	if (this->_brain)
+		delete this->_brain;
+	this->_brain = new Brain();
+	*this->_brain = *d.getBrain();
 	return (*this);
 }
 
