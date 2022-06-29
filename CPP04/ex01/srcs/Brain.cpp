@@ -2,13 +2,12 @@
 
 Brain::Brain(void) {
 	std::cout << "Creating a Brain..." << std::endl;
-	std::string	ideas[100];
-	this->_ideas = ideas;
 }
 
 Brain::Brain(Brain &b) {
 	std::cout << "Creating a Brain (cp)..." << std::endl;
-	this->_ideas = b.getIdeas();
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = b.getIdea(i);
 }
 
 Brain::~Brain(void) {	
@@ -16,14 +15,21 @@ Brain::~Brain(void) {
 }
 
 Brain	&Brain::operator=(Brain &b) {
-	this->_ideas = b.getIdeas();
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = b.getIdea(i);
 	return (*this);
 }
 
-std::string	*Brain::getIdeas(void) const {
-	return (this->_ideas);
+std::string	Brain::getIdea(int i) const {
+	if (i < 0 || i >= 100) {
+		std::cout << "Invalid index (0 - 99)" << std::endl;
+		return (NULL);
+	}
+	return (this->_ideas[i]);
 }
 
-void		Brain::setIdeas(std::string *ideas) {
-	this->_ideas = ideas;
+void		Brain::setIdea(std::string idea, int i) {
+	if (i < 0 || i >= 100)
+		std::cout << "Invalid index (0 - 99)" << std::endl;
+	this->_ideas[i] = idea;
 }

@@ -8,12 +8,7 @@ Animal::Animal(void) {
 
 Animal::Animal(Animal &a) {
 	std::cout << "Creating an Animal (cp)..." << std::endl;
-	std::cout << "bite " << a.getBrain()->getIdeas()[0] << std::endl;
-	std::cout << "bite " << a.getBrain()->getIdeas()[0] << std::endl;
-	std::cout << "bite " << a.getBrain()->getIdeas()[0] << std::endl;
 	this->_type = a.getType();
-	std::cout << "bite " << a.getBrain()->getIdeas()[0] << std::endl;
-	this->_brain = new Brain();
 	this->_brain = a.getBrain();
 }
 

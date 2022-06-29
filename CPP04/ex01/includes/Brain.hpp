@@ -7,7 +7,7 @@ class Brain {
 
 private:
 
-	std::string	*_ideas;
+	std::string	_ideas[100];
 
 public:
 
@@ -17,8 +17,8 @@ public:
 
 	Brain	&operator=(Brain &b);
 
-	std::string	*getIdeas(void) const;
-	void		setIdeas(std::string *ideas);
+	std::string	getIdea(int i) const;
+	void		setIdea(std::string idea, int i);
 
 };
 
