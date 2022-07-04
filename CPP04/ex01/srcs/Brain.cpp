@@ -1,17 +1,20 @@
 #include "Brain.hpp"
 
 Brain::Brain(void) {
-	std::cout << "Creating a Brain..." << std::endl;
+	std::cout << "Brain Constructor called" << std::endl;
+	for (int i = 0; i < 100; i++) {
+		this->_ideas[i] = "to fill " + std::to_string(i); 
+	}
 }
 
 Brain::Brain(Brain &b) {
-	std::cout << "Creating a Brain (cp)..." << std::endl;
+	std::cout << "Brain Copy Constructor called" << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->_ideas[i] = b.getIdea(i);
 }
 
-Brain::~Brain(void) {	
-	std::cout << "Deleting a Brain..." << std::endl;
+Brain::~Brain(void) {
+	std::cout << "Brain Destructor called" << std::endl;
 }
 
 Brain	&Brain::operator=(Brain &b) {
@@ -20,16 +23,14 @@ Brain	&Brain::operator=(Brain &b) {
 	return (*this);
 }
 
-std::string	Brain::getIdea(int i) const {
-	if (i < 0 || i >= 100) {
-		std::cout << "Invalid index (0 - 99)" << std::endl;
-		return (NULL);
-	}
-	return (this->_ideas[i]);
+void		Brain::setIdea(std::string idea, int i) {
+	if (i >= 0 && i < 100)
+		this->_ideas[i] = idea;
 }
 
-void		Brain::setIdea(std::string idea, int i) {
-	if (i < 0 || i >= 100)
-		std::cout << "Invalid index (0 - 99)" << std::endl;
-	this->_ideas[i] = idea;
+std::string	Brain::getIdea(int i) const {
+	if (i >= 0 && i < 100)
+		return (this->_ideas[i]);
+	else
+		return ("");
 }

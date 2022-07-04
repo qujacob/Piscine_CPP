@@ -1,19 +1,25 @@
-#ifndef CAT_H
-# define CAT_H
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal {
 
-public:
+private :
 
+	Brain	*_brain;
+
+public:
 	Cat(void);
 	Cat(Cat &c);
-	virtual ~Cat(void);
+	~Cat(void);
 
 	Cat	&operator=(Cat &c);
 
 	virtual void	makeSound(void) const;
+	void	setBrain(Brain &brain);
+	Brain	*getBrain(void) const;
 
 };
 

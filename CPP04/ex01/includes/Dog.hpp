@@ -1,19 +1,25 @@
-#ifndef DOG_H
-# define DOG_H
+#ifndef DOG_HPP
+# define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal {
 
-public:
+private :
 
+	Brain	*_brain;
+
+public:
 	Dog(void);
 	Dog(Dog &d);
-	virtual ~Dog(void);
+	~Dog(void);
 
 	Dog	&operator=(Dog &d);
 
 	virtual void	makeSound(void) const;
+	void	setBrain(Brain &brain);
+	Brain	*getBrain(void) const;
 
 };
 

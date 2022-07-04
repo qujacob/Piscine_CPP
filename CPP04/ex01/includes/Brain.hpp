@@ -13,13 +13,14 @@ public:
 
 	Brain(void);
 	Brain(Brain &b);
-	~Brain();
+	~Brain(void);
 
 	Brain	&operator=(Brain &b);
 
-	std::string	getIdea(int i) const;
 	void		setIdea(std::string idea, int i);
+	std::string	getIdea(int i) const;
 
 };
+
 
 #endif

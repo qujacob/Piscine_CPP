@@ -4,7 +4,7 @@ SRCDIR = 	./srcs/
 OBJDIR =	./objs/
 INCDIR =	./includes/
 
-SRCS =		main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS =		main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
 INCS = -I$(INCDIR)
 OBJS =		$(SRCS:.cpp=.o)
