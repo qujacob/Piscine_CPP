@@ -2,6 +2,9 @@
 # define AFORM_HPP
 
 #include <iostream>
+#include <fstream>
+#include <ctime>
+#include <cstdlib>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;

@@ -2,7 +2,7 @@
 
 PresidentialPardonForm::PresidentialPardonForm(void) {
 	std::cout << "Creating a PresidentialPardonForm" << std::endl;
-	this->_name = "Presidential";
+	this->_name = "Presidential pardon";
 	this->_isSigned = false;
 	this->_gradeSign = 25;
 	this->_gradeExec = 5;
@@ -16,7 +16,7 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &ppf) {
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : _target(target) {
 	std::cout << "Creating a PresidentialPardonForm that targets " << this->_target << std::endl;
-	this->_name = "Presidential";
+	this->_name = "Presidential pardon";
 	this->_isSigned = false;
 	this->_gradeSign = 25;
 	this->_gradeExec = 5;
@@ -37,7 +37,7 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(PresidentialPardonForm
 
 void		PresidentialPardonForm::execute(const Bureaucrat &executor) const {
 	if (this->execCheck(executor)) {
-		std::cout << this->_target << " Presidential" << std::endl;
+		std::cout << this->_target << " has been forgiven by Zaphod Beeblebrox" << std::endl;
 	}
 }
 

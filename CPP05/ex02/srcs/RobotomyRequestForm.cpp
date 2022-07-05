@@ -2,7 +2,7 @@
 
 RobotomyRequestForm::RobotomyRequestForm(void) {
 	std::cout << "Creating a RobotomyRequestForm" << std::endl;
-	this->_name = "Robotomy";
+	this->_name = "Robotomy request";
 	this->_isSigned = false;
 	this->_gradeSign = 72;
 	this->_gradeExec = 45;
@@ -16,7 +16,7 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &rrf) {
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : _target(target) {
 	std::cout << "Creating a RobotomyRequestForm that targets " << this->_target << std::endl;
-	this->_name = "Robotomy";
+	this->_name = "Robotomy request";
 	this->_isSigned = false;
 	this->_gradeSign = 72;
 	this->_gradeExec = 45;
@@ -37,7 +37,14 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(RobotomyRequestForm &rrf) {
 
 void		RobotomyRequestForm::execute(const Bureaucrat &executor) const {
 	if (this->execCheck(executor)) {
-		std::cout << this->_target << " Robotomy" << std::endl;
+		std::cout << "Wuuuuuuw wuw wuuuuuuuuuu..." << std::endl;
+		srand((unsigned int) time(NULL));
+		int random = rand() % 2;
+		std::cout << random << " ";
+		if (random)
+			std::cout << this->_target << " has been robotomized" << std::endl;
+		else
+			std::cout << this->_target << " hasn't been robotomized" << std::endl;	
 	}
 }
 
