@@ -40,7 +40,6 @@ void		RobotomyRequestForm::execute(const Bureaucrat &executor) const {
 		std::cout << "Wuuuuuuw wuw wuuuuuuuuuu..." << std::endl;
 		srand((unsigned int) time(NULL));
 		int random = rand() % 2;
-		std::cout << random << " ";
 		if (random)
 			std::cout << this->_target << " has been robotomized" << std::endl;
 		else
