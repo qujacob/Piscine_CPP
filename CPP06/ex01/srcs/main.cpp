@@ -10,4 +10,5 @@ int	main(void) {
 	std::cout << "end: " << d2 << std::endl;
 
 	delete d1;
+	return (0);
 }
