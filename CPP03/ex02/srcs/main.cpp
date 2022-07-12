@@ -8,8 +8,9 @@ int	main(void) {
 	john.highFivesGuys();
 	terry.attack("a bush");
 	terry.takeDamage(9);
-	john.attack("Timéo");
+	john.attack("Henry");
 	terry.guardGate();
+	john.highFivesGuys();
 	terry.beRepaired(123);
 	return (0);
 }

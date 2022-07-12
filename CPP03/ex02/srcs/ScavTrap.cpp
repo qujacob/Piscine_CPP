@@ -47,5 +47,5 @@ ScavTrap	&ScavTrap::operator=(ScavTrap &st) {
 // METHODS
 
 void	ScavTrap::guardGate(void) {
-	std::cout << "ScavTrap " << this->_name << " entered Gate Keeper mode." << std::cout;
+	std::cout << "ScavTrap " << this->_name << " entered Gate Keeper mode." << std::endl;
 }
