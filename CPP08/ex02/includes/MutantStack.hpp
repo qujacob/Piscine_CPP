@@ -1,3 +1,6 @@
+#ifndef MUTANTSTACK_HPP
+# define MUTANTSTACK_HPP
+
 #include <iostream>
 #include <stack>
 #include <iterator>
@@ -25,3 +28,5 @@ public :
 	iterator	end(void) {return (this->c.end());};
 
 };
+
+#endif
