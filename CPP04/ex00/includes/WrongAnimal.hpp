@@ -13,7 +13,7 @@ public :
 
 	WrongAnimal(void);
 	WrongAnimal(WrongAnimal &a);
-	~WrongAnimal(void);
+	virtual ~WrongAnimal(void);
 
 	WrongAnimal	&operator=(WrongAnimal &a);
 

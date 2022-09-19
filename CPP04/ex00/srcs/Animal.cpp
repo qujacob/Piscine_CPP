@@ -1,14 +1,17 @@
 #include "Animal.hpp"
 
 Animal::Animal(void) {
+	std::cout << "Creating Animal" << std::endl;
 	this->_type = "Unknown";
 }
 
 Animal::Animal(Animal &a) {
+	std::cout << "Creating Animal by reference" << std::endl;
 	this->_type = a.getType();
 }
 
 Animal::~Animal(void) {
+	std::cout << "Destroying Animal" << std::endl;
 }
 
 Animal	&Animal::operator=(Animal &a) {

@@ -16,5 +16,9 @@ int main() {
 
 	std::cout << x->getType() << " " << std::endl;
 	x->makeSound();
-	return 0;
+	delete x;
+	delete i;
+	delete j;
+	delete meta;
+	return (0);
 }

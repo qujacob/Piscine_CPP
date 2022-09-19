@@ -8,6 +8,7 @@ int main()
 		std::cout << "==============================================" << std::endl;
 		std::cout << std::endl;
 
+		// AAnimal animal;
 		Cat cat;
 		std::cout << std::endl;
 		Cat cat2;

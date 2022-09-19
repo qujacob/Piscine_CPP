@@ -1,14 +1,18 @@
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal(void) {
+	std::cout << "Creating WrongAnimal" << std::endl;
 	this->_type = "Unknown";
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal &a) {
+	std::cout << "Creating WrongAnimal by reference" << std::endl;
 	this->_type = a.getType();
 }
 
 WrongAnimal::~WrongAnimal(void) {
+	std::cout << "Destroying WrongAnimal" << std::endl;
+
 }
 
 WrongAnimal	&WrongAnimal::operator=(WrongAnimal &a) {

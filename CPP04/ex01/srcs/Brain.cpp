@@ -3,7 +3,8 @@
 Brain::Brain(void) {
 	std::cout << "Brain Constructor called" << std::endl;
 	for (int i = 0; i < 100; i++) {
-		this->_ideas[i] = "to fill " + std::to_string(i); 
+		std::string iString = static_cast<std::ostringstream*>( &(std::ostringstream() << i) )->str();
+		this->_ideas[i] = "to fill " + iString; 
 	}
 }
 

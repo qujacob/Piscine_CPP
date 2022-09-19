@@ -13,7 +13,7 @@ public :
 
 	Animal(void);
 	Animal(Animal &a);
-	~Animal(void);
+	virtual ~Animal(void);
 
 	Animal	&operator=(Animal &a);
 
