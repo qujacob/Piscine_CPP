@@ -10,7 +10,7 @@ public:
 	ScavTrap(void);
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap &st);
-	virtual ~ScavTrap(void);
+	~ScavTrap(void);
 
 	ScavTrap	&operator=(ScavTrap &st);
 
