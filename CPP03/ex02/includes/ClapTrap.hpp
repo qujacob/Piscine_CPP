@@ -12,7 +12,7 @@ public :
 	ClapTrap(void);
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap &ct);
-	~ClapTrap(void);
+	virtual ~ClapTrap(void);
 
 	ClapTrap	&operator=(ClapTrap &ct);
 

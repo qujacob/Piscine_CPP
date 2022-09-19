@@ -10,11 +10,12 @@ public:
 	ScavTrap(void);
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap &st);
-	~ScavTrap(void);
+	virtual ~ScavTrap(void);
 
 	ScavTrap	&operator=(ScavTrap &st);
 
 	void		guardGate(void);
+	void		attack(const std::string &target);
 	
 };
 

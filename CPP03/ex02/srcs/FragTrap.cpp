@@ -49,3 +49,14 @@ FragTrap	&FragTrap::operator=(FragTrap &st) {
 void	FragTrap::highFivesGuys(void) {
 	std::cout << "FragTrap " << this->_name << " asked for high fives." << std::endl;
 }
+
+void	FragTrap::attack(const std::string &target) {
+	if (this->_hp == 0)
+		std::cout << "Mr. Stark... I don't feel so good..." << std::endl;
+	else if (this->_ep == 0)
+		std::cout << "I need battery..." << std::endl;
+	else {
+		std::cout << "Fragtrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage !" << std::endl;
+		this->_ep--;
+	}
+}

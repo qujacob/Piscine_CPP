@@ -49,3 +49,14 @@ ScavTrap	&ScavTrap::operator=(ScavTrap &st) {
 void	ScavTrap::guardGate(void) {
 	std::cout << "ScavTrap " << this->_name << " entered Gate Keeper mode." << std::endl;
 }
+
+void	ScavTrap::attack(const std::string &target) {
+	if (this->_hp == 0)
+		std::cout << "Mr. Stark... I don't feel so good..." << std::endl;
+	else if (this->_ep == 0)
+		std::cout << "I need battery..." << std::endl;
+	else {
+		std::cout << "Scavtrap " << this->_name << " attacks " << target << ", causing " << this->_ad << " points of damage !" << std::endl;
+		this->_ep--;
+	}
+}
