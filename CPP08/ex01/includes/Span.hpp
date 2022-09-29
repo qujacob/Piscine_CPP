@@ -2,6 +2,7 @@
 # define SPAN_HPP
 
 #include <iostream>
+#include <climits>
 #include <vector>
 #include <algorithm>
 #include <cmath>
@@ -10,7 +11,7 @@ class	Span {
 
 private :
 
-	int				_N;
+	int					_N;
 	std::vector<int>	_l;
 
 public :
@@ -23,6 +24,7 @@ public :
 	Span	&operator=(Span &sp);
 
 	void				addNumber(const int n);
+	void				addNumbers(const int size);
 	int					shortestSpan(void) const;
 	int					longestSpan(void) const;
 	int					getN(void) const;

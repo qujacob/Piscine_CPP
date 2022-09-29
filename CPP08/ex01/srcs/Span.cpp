@@ -31,6 +31,11 @@ void	Span::addNumber(const int n) {
 		this->_l.push_back(n); 
 }
 
+void	Span::addNumbers(const int size) {
+	for (int i = 0; i < size; i++)
+		addNumber(i);
+}
+
 int		Span::shortestSpan(void) const {
 	if (this->_l.size() < 2)
 		throw Span::SpanSize();
